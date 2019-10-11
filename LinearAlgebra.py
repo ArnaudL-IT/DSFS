@@ -45,7 +45,7 @@ def squared_distance(v: Vector, w: Vector)->float:
     return sum_of_squares(substract(v, w))
 
 def distance(v: Vector, w: Vector)->float:
-    return magnitude(v, w)
+    return math.sqrt(squared_distance(v, w))
 
 def shape(A: Matrix)->Tuple[int, int]:
     """Return (# of rows of A, # of columns of A)"""
