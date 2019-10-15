@@ -19,7 +19,7 @@ def vector_sum(vectors: List[Vector])->Vector:
     assert vectors, "No vectors provided"
     num_elements = len(vectors[0])
     assert all(len(v) == num_elements for v in vectors), "Different vector dimensions"
-    return [sum(vector[i] for vector in vectors for i in range(num_elements))]
+    return [sum(vector[i] for vector in vectors) for i in range(num_elements)]
 
 def scalar_multiply(c: float, v: Vector)->Vector:
     """"Multiplies every elements by c"""
