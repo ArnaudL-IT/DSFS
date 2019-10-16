@@ -68,21 +68,21 @@ def binomial_histogram(p: float, n: int, num_points: int)->None:
 
 ####################
 
-xs = [ x / 10.0 for x in range(-50,50)]
-plt.plot(xs, [normal_pdf(x, sigma = 1) for x in xs], '-', label = 'mu=0, sigma=1')
-plt.plot(xs, [normal_pdf(x, sigma = 0.5) for x in xs], '--', label = 'mu=0, sigma=0.5')
-plt.plot(xs, [normal_pdf(x, sigma = 2) for x in xs], ':', label = 'mu=0, sigma=2')
-plt.plot(xs, [normal_pdf(x, mu = -1) for x in xs], '-.', label = 'mu=-1, sigma=1')
-plt.legend()
-plt.title('Various Normal PDFs')
-plt.show()
+#xs = [ x / 10.0 for x in range(-50,50)]
+#plt.plot(xs, [normal_pdf(x, sigma = 1) for x in xs], '-', label = 'mu=0, sigma=1')
+#plt.plot(xs, [normal_pdf(x, sigma = 0.5) for x in xs], '--', label = 'mu=0, sigma=0.5')
+#plt.plot(xs, [normal_pdf(x, sigma = 2) for x in xs], ':', label = 'mu=0, sigma=2')
+#plt.plot(xs, [normal_pdf(x, mu = -1) for x in xs], '-.', label = 'mu=-1, sigma=1')
+#plt.legend()
+#plt.title('Various Normal PDFs')
+#plt.show()
 
-plt.plot(xs, [normal_cdf(x, sigma = 1) for x in xs], '-', label = 'mu=0, sigma=1')
-plt.plot(xs, [normal_cdf(x, sigma = 0.5) for x in xs], '--', label = 'mu=0, sigma=0.5')
-plt.plot(xs, [normal_cdf(x, sigma = 2) for x in xs], ':', label = 'mu=0, sigma=2')
-plt.plot(xs, [normal_cdf(x, mu = -1) for x in xs], '-.', label = 'mu=-1, sigma=1')
-plt.legend(loc=4)
-plt.title('Various Normal CDFs')
-plt.show()
+#plt.plot(xs, [normal_cdf(x, sigma = 1) for x in xs], '-', label = 'mu=0, sigma=1')
+#plt.plot(xs, [normal_cdf(x, sigma = 0.5) for x in xs], '--', label = 'mu=0, sigma=0.5')
+#plt.plot(xs, [normal_cdf(x, sigma = 2) for x in xs], ':', label = 'mu=0, sigma=2')
+#plt.plot(xs, [normal_cdf(x, mu = -1) for x in xs], '-.', label = 'mu=-1, sigma=1')
+#plt.legend(loc=4)
+#plt.title('Various Normal CDFs')
+#plt.show()
 
-binomial_histogram(0.75, 100, 10000)
+#binomial_histogram(0.75, 100, 10000)

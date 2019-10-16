@@ -60,3 +60,17 @@ def get_row(A: Matrix, i: int)->Vector:
 def get_column(A: Matrix, j: int)->Vector:
     """Return the j-th column of matrix A as a vector"""
     return [A_i[j] for A_i in A]
+
+############################################################
+
+from typing import Callable
+
+def make_matrix(num_rows: int, num_cols: int, entry_fn: Callable[[int, int], float])->Matrix:
+    """Returns a num_rows x num_cols matrix whose (i, j)-th entry is entry_fn(i, j)"""
+    return [[entry_fn(i, j) for j in range(num_cols)] for i in range(num_rows)]
+
+def indentity_matrix(n: int)->Matrix:
+    """Returns the n x n identity matrix"""
+    return make_matrix(n, n, lambda i, j: 1 if i == j else 0)
+
+assert indentity_matrix(5) == [[1, 0, 0, 0, 0], [0, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1]]
